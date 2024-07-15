@@ -13,7 +13,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
-app.use('/', (req, res)=>{
+app.get('/', (req, res)=>{
     res.send('Backend is running for Task Management App');
 })
 
