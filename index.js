@@ -13,6 +13,10 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
+app.use('/', (req, res)=>{
+    res.send('Backend is running for Task Management App');
+})
+
 app.use('/api/auth', authRoutes);
 app.use('/api', taskRoutes);
 
